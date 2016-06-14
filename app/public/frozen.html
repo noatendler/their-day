@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="showFrozen">
+ <head>
+     <title>frozen</title>
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+ </head>
+ <body >
+ <tbody>
+ <div ng-controller="showThemesCtrl ">
+    <h2 class="text-center">Frozen</h2>
+    <div ng-repeat = "theme in FrozenShowTheme.Themes">
+         <p class="text-center">for age: {{theme.age}}</p>
+         <p class="text-center"> description: {{theme.description}}</p>
+         <p class="text-center">{{theme.description_more}}</p>
+    </div>
+    <h2 class="text-center"> DO IT YOURSELF </h2>
+    <div ng-repeat = " create in FrozenShowTheme.Create">
+         <p class="text-center">{{create.title}}</p>
+         <p class="text-center">description: {{create.description}}</p>
+         <img ng-src="{{create.image}}" class="imgCenter">
+    </div>
+    <h2 class="text-center"> BUY READY KITS </h2>
+    <div ng-repeat = "kit in FrozenShowTheme.Kits">
+          <p class="text-center">{{kit.title}}</p>
+          <p class="text-center">description: {{kit.description}}</p>
+          <img ng-src="{{kit.image}}" class="imgCenter">       
+    </div>
+    <h2 class="text-center"> HIRE ENTERTAINMENT </h2>
+     <div ng-repeat = "activity in FrozenShowTheme.Activity">
+          <p class="text-center">{{activity.title}}</p>
+          <p class="text-center">description: {{activity.description}}</p>
+          <p class="text-center">price: {{activity.price}}</p>
+          <img ng-src="{{activity.image}}" class="imgCenter">
+    </div>
+    <h2 class="text-center"> DECORETION </h2>
+     <div ng-repeat = "decoretion in FrozenShowTheme.Decortion">
+          <p class="text-center">{{decoretion.title}}</p>
+          <img ng-src="{{decoretion.image}}" class="imgCenter">
+    </div>
+ </div>
+ </table>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/showFrozenController.js"></script>
+ </body>
+ </html>

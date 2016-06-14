@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="addActivityApp">
+ <head>
+ <title>show activity</title>
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+ </head>
+ <body ng-controller="activityController">
+ <h1 class="text-center">Add Activity</h1>
+        <form class="form-group" enctype="multipart/form-data" method="POST" action="http://localhost:3000/upload">
+          <div class="form-group">
+          <div class="col-sm-10">
+            <label for="inputEmail3" class="col-sm-2 control-label">Title:</label>
+            <input class="form-control" type="text" placeholder="Title" ng-model="title" name="title" required></input>
+          </div>
+          <div class="col-sm-10">
+            <label for="inputEmail3" class="col-sm-2 control-label">Age:</label>
+            <input class="form-control" id="inputEmail3" type="number" placeholder="Age" ng-model="age" min="0" max="16" name="age" required></input>
+          </div>
+          <div class="col-sm-10">
+            <label for="inputEmail3" class="col-sm-2 control-label">Description:</label>
+            <textarea class="form-control" id="inputEmail3" type="text" placeholder="Description" ng-model="description" name="description" required></textarea>
+            <br>
+          </div>
+          <div class="col-sm-10">
+            <label for="inputEmail3" class="col-sm-2 control-label">Themes:</label>
+            <input type="radio" name="theme" value="frozen" ng-model="theme">frozen &nbsp;
+            <input type="radio" name="theme" value="minions" ng-model="theme">minions &nbsp;
+            <input type="radio" name="theme" value="heroes" ng-model="theme">heroes
+            <input type="radio" name="theme" value="princess" ng-model="theme">princess &nbsp;
+            <input type="radio" name="theme" value="piraets" ng-model="theme">piraets &nbsp;
+            <input type="radio" name="theme" value="none" ng-model="theme">none &nbsp;
+            <br>
+          </div>
+          <div class="col-sm-10">
+            <br>
+            <label for="inputEmail3" class="col-sm-2 control-label">Price per hour:</label>
+            <input type="range" name="price" min="0" max="500" value="250" oninput="outputUpdate(value)" id="fader" required>
+            </input>
+            <output for="fader" id="volume"></output>
+          </div>
+          <div class="col-sm-10">
+            <br>
+            <input type="file" name="file" accept="image/*" required></input>
+            </div>
+            <div class="col-sm-10">
+            <br>
+            <input type="submit" class="btn btn-default" name="send"></input>
+          </div>
+          </div>
+        </form> 
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+    <script src="js/addController.js"></script>
+    <script>   
+    function outputUpdate(vol) {
+    document.querySelector('#volume').value = vol;
+    }
+    </script>
+ </body>
+ </html>

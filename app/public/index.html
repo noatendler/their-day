@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="showTop5">
+     <head>
+         <title>show top 5</title>
+         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+         <link rel="stylesheet" type="text/css" href="css/style.css">
+     </head>
+     <body ng-controller="showpCtrl">
+         <tbody>
+             <div ng-repeat="party in showtop5">
+                 <h2 class="text-center">{{party.title}}</h2>
+                 <h2 class="text-center">{{party.description}}</h2>
+                 <img ng-src="{{party.image}}" class="imgCenter">
+             </div>
+             <br>
+             <a class="btn btn-default top5button" href="showThemes.html" role="button">themes</a>
+         </table>
+        <script src="js/lib/angular/angular.min.js"></script>
+        <script src="js/showtop5.js"></script>
+     </body>
+ </html>

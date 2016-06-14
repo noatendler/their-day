@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="showActivity">
+     <head>
+         <title>all activities</title>
+         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+     </head>
+     <body ng-controller="showCtrl">
+         <tbody>
+             <div ng-repeat="activities in showController.activities">
+                 <h2>{{activities.title}}</h2>
+                 <span>for age: </span>
+                 <p>{{activities.age}}</p>
+                 <span>description: </span>
+                 <p>{{activities.description}}</p>
+                 <span>price per hour: </span>
+                 <p>{{activities.price}}</p>
+                 <img ng-src="{{activities.image}}" width="170" height="170" />
+             </div>
+         </table>
+        <script src="js/lib/angular/angular.min.js"></script>
+        <script src="js/showController.js"></script>
+     </body>
+ </html>

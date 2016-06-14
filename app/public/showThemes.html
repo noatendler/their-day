@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="showThemes">
+     <head>
+         <title>all Themes</title>
+         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+         <link rel="stylesheet" type="text/css" href="css/style.css">
+     </head>
+         <body ng-controller="showThemesCtrl">
+             <tbody>
+                 <div ng-repeat="themes in showThemesController.themes" ng-show="$first">
+                     <h2 class="text-center">{{themes.theme}}</h2>
+                     <p class="text-center"> for age:{{themes.age}}</p>
+                     <p class="text-center">description: {{themes.description}}</p>
+                     <a ng-href="frozen.html"><img class="imgCenter" ng-src="{{themes.image}}"></a>
+                 </div>
+                 <div ng-repeat="themes in showThemesController.themes" ng-show="!$first">
+                     <h2 class="text-center">{{themes.theme}}</h2>
+                     <p class="text-center">for age: {{themes.age}}</p>
+                     <p class="text-center">description: {{themes.description}}</p>
+                     <a ng-href="#"><img class="imgCenter" ng-src="{{themes.image}}"></a>
+                 </div>
+             </table>
+        <script src="js/lib/angular/angular.min.js"></script>
+        <script src="js/showThemesController.js"></script>
+     </body>
+ </html>
+
+
+
+
+

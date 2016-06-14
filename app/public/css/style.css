@@ -1,0 +1,25 @@
+.login {
+  background: #eceeee;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+  height: 257px;
+  margin: 20px auto 0;
+  width: 298px;
+}
+.send {
+  padding-top:6px;
+  margin: 100px 0px 0px 80px;
+  position:relative;
+}
+.out{
+    margin: 100px 0px 10px 145px;   
+}
+.imgCenter{
+    width: 500px;
+    height:350px;
+    display: block;
+    margin: 0 auto;
+}
+.top5button{
+    margin-left:640px;
+}

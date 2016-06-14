@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="55714991049-t2mkm507tjgqilivsgpbq7l3fh3nhmnl.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+  </head>
+  <body ng-controller="AuthCtrl">
+  <h1> please connect first </h1>
+  <div class="login">
+    <div class="g-signin2 send" data-onsuccess="onSignIn"></div>
+    <a href="#" class="out" onclick="signOut();">Sign out</a>
+  </div>
+    <script>
+    var xhttp;
+    if (window.XMLHttpRequest) {
+    xhttp = new XMLHttpRequest();
+    } else {
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+   function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId());
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail());
+      var id_token = googleUser.getAuthResponse().id_token;
+      console.log("ID Token: " + id_token);
+      xhttp.open("POST", "http://localhost:3000/user", true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send("id="+profile.getId()+"&name="+profile.getName()+"&imageUrl="+profile.getImageUrl()+"&email="+profile.getEmail());
+      }
+  function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+      console.log('User signed out.');
+      });
+   }
+  </script>
+  </body>
+</html>
