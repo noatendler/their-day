@@ -2,21 +2,71 @@
 <html ng-app="showTop5">
      <head>
          <title>show top 5</title>
-         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
          <link rel="stylesheet" type="text/css" href="css/style.css">
      </head>
+     <header>
+        <a href="index.html" id="logo"> </a>
+         <nav>
+          <h3 class="addParty">Add Party</h3>
+             <a href="addParty.html" class="addImg">
+             <img src="../images/add.png">
+            </a>
+            <h3 class="wishList">Wish List</h3>
+            <a href="wishList.html" class="wishListImg">
+            <img src="../images/heart.png" >
+            </a>
+         </nav>
+     </header>
      <body ng-controller="showpCtrl">
-         <tbody>
-             <div ng-repeat="party in showtop5">
-                 <h2 class="text-center">{{party.title}}</h2>
-                 <h2 class="text-center">{{party.description}}</h2>
-                 <img ng-src="{{party.image}}" class="imgCenter">
+     <div id="wrapper">
+     <main>
+         <tbody class="mainImgs">
+             <div ng-repeat="party in showtop5" ng-class=party.name>
+                <img ng-src="{{party.image}}">
+                <h2 id="title">{{party.title}}</h2>
+                 <h3 id="description">{{party.description}}</h2>
+                 <button class="imageClick" ng-click="click(party.title, party.description, party.image, $index)">
+                     <img src="../images/emptyHeart.png" id="heart">
+                 </button>
+                <img ng-src="{{party.img}}" id="pace">
              </div>
-             <br>
-             <a class="btn btn-default top5button" href="showThemes.html" role="button">themes</a>
-         </table>
-        <script src="js/lib/angular/angular.min.js"></script>
-        <script src="js/showtop5.js"></script>
+         </tbody>
+         </main>
+         <div class="clear"></div>
+     <footer>
+         <nav>
+            <ul>
+                <li>
+                    <p class="footerProfile">Profile</p>
+                    <a href="#">
+                         <img src="../images/profile.png" class="profileImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerThemes">Themes</p>
+                    <a href="showThemes.html">
+                         <img src="../images/themes.png" class="themesImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerActivity">Activities</p>
+                    <a href="showActivity.html">
+                        <img src="../images/activities.png" class="activityeImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerDecoration">Decorations</p>
+                    <a href="#">
+                        <img src="../images/decoration.png" class="decorationImg">
+                    </a>
+                </li>
+            </ul>
+         </nav>
+     </footer>
+     </div>
      </body>
+        <script src="js/lib/angular/angular.min.js"></script>
+        <script src="js/lib/angular/angular-cookies.min.js"></script>
+        <script src="js/lib/angular/angular-resource.min.js"></script>
+        <script src="js/showtop5.js"></script>
  </html>

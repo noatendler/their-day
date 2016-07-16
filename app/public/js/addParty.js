@@ -1,14 +1,12 @@
-var addPartyApp = angular.module('addPartyApp',[]);   
+var addPartyApp = angular.module('addPartyApp',['ngCookies']);   
 
 
-addPartyApp.controller('partyController',['$scope','$http',function($scope,$http){
-        $scope.createParty = function(){     
-                var data = {};      
-                data.title = $scope.title;
-                data.description = $scope.description;
-                data.image = $scope.myFile;      
-                console.log($scope.myFile)
-                console.log(data); 
-            $http.post('http://localhost:3000/party', data).then() //callback
-        }
+addPartyApp.controller('partyController',['$scope','$http','$cookies',function($scope,$http,$cookies){
+    $scope.myFunc=function() { 
+      var party = {};      
+                party.title = $scope.title;
+                party.description = $scope.description;
+                party.image = $scope.myFile;
+              
+            }
 }]);

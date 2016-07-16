@@ -6,24 +6,84 @@
          <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
          <link rel="stylesheet" type="text/css" href="css/style.css">
      </head>
+     <header>
+        <a href="index.html" id="logo"> </a>
+         <nav>
+          <h3 class="addPartyT">Add Party</h3>
+             <a href="addParty.html" class="addImgT">
+             <img src="../images/add.png">
+            </a>
+            <h3 class="wishListT">Wish List</h3>
+            <a href="wishList.html" class="wishListImgT">
+            <img src="../images/heart.png" >
+            </a>
+         </nav>
+     </header>
          <body ng-controller="showThemesCtrl">
-             <tbody>
-                 <div ng-repeat="themes in showThemesController.themes" ng-show="$first">
-                     <h2 class="text-center">{{themes.theme}}</h2>
-                     <p class="text-center"> for age:{{themes.age}}</p>
-                     <p class="text-center">description: {{themes.description}}</p>
-                     <a ng-href="frozen.html"><img class="imgCenter" ng-src="{{themes.image}}"></a>
+          <div id="wrapper">
+            <main>
+             <tbody class="mainImgs">
+                 <div ng-repeat="themes in showThemesController.themes"  ng-class=themes.name ng-show="$first">
+                    <h2 id="title">{{themes.theme}}</h2>
+                    <span id="age"> (age:{{themes.age}})</span>
+                     <p id="description">{{themes.description}}</p>
+                     <a ng-href="frozen.html">
+                     <img ng-src="{{themes.image}}" class="themeImg">
+                     </a>
+                     <button class="imageClick" ng-click="click(themes.theme, themes.description,themes.image, $index )">
+                         <img src="../images/emptyHeart.png" id="heart">
+                     </button>
                  </div>
-                 <div ng-repeat="themes in showThemesController.themes" ng-show="!$first">
-                     <h2 class="text-center">{{themes.theme}}</h2>
-                     <p class="text-center">for age: {{themes.age}}</p>
-                     <p class="text-center">description: {{themes.description}}</p>
-                     <a ng-href="#"><img class="imgCenter" ng-src="{{themes.image}}"></a>
+                 <div ng-repeat="themes in showThemesController.themes" ng-class=themes.name ng-show="!$first">
+                     <h2 id="title">{{themes.theme}}</h2>
+                     <span id="age">(age: {{themes.age}})</span>
+                     <p id="description">{{themes.description}}</p>
+                     <a ng-href="#">
+                     <img ng-src="{{themes.image}}" class="themeImg">
+                     </a>
+                     <button class="imageClick" ng-click="click(themes.theme, themes.description,themes.image, $index)">
+                         <img src="../images/emptyHeart.png" id="heart">
+                     </button>
                  </div>
-             </table>
+             </tbody>
+         </main>
+         <div class="clear"></div>
+    <footer>
+         <nav>
+            <ul>
+                <li>
+                    <p class="footerProf">Profile</p>
+                    <a href="#">
+                         <img src="../images/profile.png" class="profileImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerT">Themes</p>
+                    <a href="showThemes.html">
+                         <img src="../images/themes.png" class="themesImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerAct">Activities</p>
+                    <a href="showActivity.html">
+                        <img src="../images/activities.png" class="actImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerDec">Decorations</p>
+                    <a href="#">
+                        <img src="../images/decoration.png" class="decImg">
+                    </a>
+                </li>
+            </ul>
+         </nav>
+     </footer>
+     </div>
+    </body>
         <script src="js/lib/angular/angular.min.js"></script>
+        <script src="js/lib/angular/angular-cookies.min.js"></script>
+        <script src="js/lib/angular/angular-resource.min.js"></script>
         <script src="js/showThemesController.js"></script>
-     </body>
  </html>
 
 

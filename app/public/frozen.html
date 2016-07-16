@@ -6,42 +6,91 @@
      <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
      <link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
- <body >
+     <header>
+        <a href="index.html" id="logo"> </a>
+         <nav>
+          <h3 class="addPartyT">Add Party</h3>
+             <a href="addParty.html" class="addImgT">
+             <img src="../images/add.png">
+            </a>
+            <h3 class="wishListT">Wish List</h3>
+            <a href="wishList.html" class="wishListImgT">
+            <img src="../images/heart.png" >
+            </a>
+         </nav>
+     </header>
+ <body ng-controller="showThemesCtrl">
+  <div id="wrapper">
+  <main>
  <tbody>
  <div ng-controller="showThemesCtrl ">
-    <h2 class="text-center">Frozen</h2>
+    <h2 id="titleFrozen">Frozen</h2>
     <div ng-repeat = "theme in FrozenShowTheme.Themes">
-         <p class="text-center">for age: {{theme.age}}</p>
-         <p class="text-center"> description: {{theme.description}}</p>
-         <p class="text-center">{{theme.description_more}}</p>
+         <span id="ageFrozen">(age: {{theme.age}})</span>
+         <p id="descriptionFrozen"> {{theme.description}}</p>
+         <p id="descriptionMore">{{theme.description_more}}</p>
+         <img ng-src="{{theme.image}}" class="themeImgFrozen">
     </div>
-    <h2 class="text-center"> DO IT YOURSELF </h2>
-    <div ng-repeat = " create in FrozenShowTheme.Create">
-         <p class="text-center">{{create.title}}</p>
-         <p class="text-center">description: {{create.description}}</p>
-         <img ng-src="{{create.image}}" class="imgCenter">
+    <h2 id="titleOneCreate"> DO IT YOURSELF: </h2>
+    <div ng-repeat = " create in FrozenShowTheme.Create" ng-class=create.name>
+         <h2 id="titleCreate">{{create.title}}</h2>
+         <p id="descriptionCreate">{{create.description}}</p>
+         <img ng-src="{{create.image}}" class="themeImgCreate">
     </div>
-    <h2 class="text-center"> BUY READY KITS </h2>
-    <div ng-repeat = "kit in FrozenShowTheme.Kits">
-          <p class="text-center">{{kit.title}}</p>
-          <p class="text-center">description: {{kit.description}}</p>
-          <img ng-src="{{kit.image}}" class="imgCenter">       
+    <h2 id="titleOneKits"> BUY READY KITS </h2>
+    <div ng-repeat = "kit in FrozenShowTheme.Kits" ng-class=kit.name>
+          <h2 id="titleKits">{{kit.title}}</h2>
+          <p id="descriptionKits">{{kit.description}}</p>
+          <img ng-src="{{kit.image}}" class="themeImgKits">       
     </div>
-    <h2 class="text-center"> HIRE ENTERTAINMENT </h2>
-     <div ng-repeat = "activity in FrozenShowTheme.Activity">
-          <p class="text-center">{{activity.title}}</p>
-          <p class="text-center">description: {{activity.description}}</p>
-          <p class="text-center">price: {{activity.price}}</p>
-          <img ng-src="{{activity.image}}" class="imgCenter">
+    <h2 id="titleOneActivity"> HIRE ENTERTAINMENT </h2>
+        <div ng-repeat = "activity in FrozenShowTheme.Activity">
+          <h2 id="titleActivity">{{activity.title}}</h2>
+          <h3 id="priceActivity">price {{activity.price}}$</h3>
+          <img ng-src="{{activity.image}}" class="themeImgActivity">
     </div>
-    <h2 class="text-center"> DECORETION </h2>
-     <div ng-repeat = "decoretion in FrozenShowTheme.Decortion">
-          <p class="text-center">{{decoretion.title}}</p>
-          <img ng-src="{{decoretion.image}}" class="imgCenter">
+    <h2 id="titleOneDecoretion"> DECORETION </h2>
+     <!--<div ng-repeat = "decoretion in FrozenShowTheme.Decortion" ng-class=decoretion.name>>
+          <p id="titleDecoretion">{{decoretion.title}}</p>
+          <img ng-src="{{decoretion.image}}" class="themeImgDecoretion">
     </div>
+    !-->
  </div>
- </table>
+ </tbody>
+ </main>
+  <div class="clear"></div>
+    <footer>
+         <nav>
+            <ul>
+                <li>
+                    <p class="footerProf">Profile</p>
+                    <a href="#">
+                         <img src="../images/profile.png" class="profileImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerT">Themes</p>
+                    <a href="showThemes.html">
+                         <img src="../images/themes.png" class="themesImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerAct">Activities</p>
+                    <a href="showActivity.html">
+                        <img src="../images/activities.png" class="actImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerDec">Decorations</p>
+                    <a href="#">
+                        <img src="../images/decoration.png" class="decImg">
+                    </a>
+                </li>
+            </ul>
+         </nav>
+     </footer>
+    </div>
+ </body>
     <script src="js/lib/angular/angular.min.js"></script>
     <script src="js/showFrozenController.js"></script>
- </body>
  </html>

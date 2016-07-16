@@ -4,26 +4,43 @@
  <title>show activity</title>
  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+ <link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
+      <header>
+        <a href="index.html" id="logo"> </a>
+         <nav>
+          <h3 class="addPartyTheme">Add Party</h3>
+             <a href="addParty.html" class="addImgTheme">
+             <img src="../images/add.png">
+            </a>
+            <h3 class="wishListTheme">Wish List</h3>
+            <a href="wishList.html" class="wishListImgTheme">
+            <img src="../images/heart.png" >
+            </a>
+         </nav>
+     </header>
+ <body ng-controller="partyController">
+ <div id="wrapper">
+ <main>
  <body ng-controller="activityController">
- <h1 class="text-center">Add Activity</h1>
+ <h1 class="text-center" id="mainTitle">ADD ACTIVITY</h1>
         <form class="form-group" enctype="multipart/form-data" method="POST" action="http://localhost:3000/upload">
           <div class="form-group">
           <div class="col-sm-10">
-            <label for="inputEmail3" class="col-sm-2 control-label">Title:</label>
+            <label for="inputEmail3" class="col-sm-2 control-label" id="addPartyTitl">Title:</label>
             <input class="form-control" type="text" placeholder="Title" ng-model="title" name="title" required></input>
           </div>
           <div class="col-sm-10">
-            <label for="inputEmail3" class="col-sm-2 control-label">Age:</label>
+            <label for="inputEmail3" class="col-sm-2 control-label"  id="addPartyDecrip">Age:</label>
             <input class="form-control" id="inputEmail3" type="number" placeholder="Age" ng-model="age" min="0" max="16" name="age" required></input>
           </div>
           <div class="col-sm-10">
-            <label for="inputEmail3" class="col-sm-2 control-label">Description:</label>
+            <label for="inputEmail3" class="col-sm-2 control-label"  id="addPartyDecrip">Description:</label>
             <textarea class="form-control" id="inputEmail3" type="text" placeholder="Description" ng-model="description" name="description" required></textarea>
             <br>
           </div>
           <div class="col-sm-10">
-            <label for="inputEmail3" class="col-sm-2 control-label">Themes:</label>
+            <label for="inputEmail3" class="col-sm-2 control-label"  id="addPartyDecrip">Themes:</label>
             <input type="radio" name="theme" value="frozen" ng-model="theme">frozen &nbsp;
             <input type="radio" name="theme" value="minions" ng-model="theme">minions &nbsp;
             <input type="radio" name="theme" value="heroes" ng-model="theme">heroes
@@ -34,7 +51,7 @@
           </div>
           <div class="col-sm-10">
             <br>
-            <label for="inputEmail3" class="col-sm-2 control-label">Price per hour:</label>
+            <label for="inputEmail3" class="col-sm-2 control-label"  id="addPartyDecrip">Price per hour:</label>
             <input type="range" name="price" min="0" max="500" value="250" oninput="outputUpdate(value)" id="fader" required>
             </input>
             <output for="fader" id="volume"></output>
@@ -45,10 +62,44 @@
             </div>
             <div class="col-sm-10">
             <br>
-            <input type="submit" class="btn btn-default" name="send"></input>
+            <input type="submit" class="btn btn-default" name="send" id="sendAct"></input>
           </div>
           </div>
         </form> 
+        </main>
+         <div class="clear"></div>
+    <footer>
+         <nav>
+            <ul>
+                <li>
+                    <p class="footerProfile">Profile</p>
+                    <a href="#">
+                         <img src="../images/profile.png" class="profileImgParty">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerThemes">Themes</p>
+                    <a href="showThemes.html">
+                         <img src="../images/themes.png" class="themesImgParty">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerActivityParty">Activities</p>
+                    <a href="showActivity.html">
+                        <img src="../images/activities.png" class="activityeImgParty">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerDecParty">Decorations</p>
+                    <a href="#">
+                        <img src="../images/decoration.png" class="decImgParty">
+                    </a>
+                </li>
+            </ul>
+         </nav>
+     </footer>
+     </div> 
+ </body>
     <script src="js/lib/angular/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
     <script src="js/addController.js"></script>
@@ -57,5 +108,4 @@
     document.querySelector('#volume').value = vol;
     }
     </script>
- </body>
  </html>

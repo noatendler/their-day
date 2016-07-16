@@ -14,13 +14,35 @@ function hasher(){
 };
 
 var client = knox.createClient({
-  key: ''
-  , secret: ''
-  , bucket: ''
+    key: ''
+    , secret: ''
+    , bucket: ''
 });
 
+exports.saveData = function(request, response){  
+    var cookies = parseCookies(request);
 
-exports.saveData = function(request, response){
+    function parseCookies (request) {
+    var list = {},
+        rc = request.headers.cookie;
+
+    rc && rc.split(';').forEach(function( cookie ) {
+        var parts = cookie.split('=');
+        list[parts.shift().trim()] = decodeURI(parts.join('='));
+    });
+
+    return list;
+}
+
+var temp=myFunction(cookies.cookieEmail);
+
+console.log(temp);
+
+function myFunction(str) {
+    var res = str.replace("%40", "@");
+    return res;
+ }
+
     var file = request.files.file;
     var hash = hasher();
 
@@ -45,6 +67,7 @@ exports.saveData = function(request, response){
                 title: request.body.title,
                 description  : request.body.description,
                 imageUrl: req.url+hash+"-party.png",
+                cookieEmail: cookies.cookieEmail
               });
               saveParty.save(function(error, result) {
                 if (error) {
@@ -58,7 +81,6 @@ exports.saveData = function(request, response){
             console.log(err);
         }
 }
-
 
 exports.getData = function(req, res){
     console.log(req);

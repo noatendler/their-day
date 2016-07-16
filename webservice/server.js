@@ -7,12 +7,10 @@ var multipart = require('connect-multiparty');
 var multipartAction = multipart();
 var user = require('./controller/user');
 var party = require('./controller/party');
-var cookieParser = require('cookie-parser');
 var themes = require('./controller/themesController');
 var frozen=require('./controller/frozenController');
+var wish = require('./controller/wishController')
 
-
-app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -83,5 +81,8 @@ app.post('/user',user.saveData);
 app.post('/party',multipartAction,party.saveData);
 app.get('/party',party.getData);
 app.get('/frozen',frozen.getData);
+app.post('/wishlist',multipartAction,wish.saveData);
+app.get('/wishlist/:email',wish.getData);
+app.post('/wishlistDel',multipartAction,wish.delData);
 
 app.listen(port);
