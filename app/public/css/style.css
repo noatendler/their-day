@@ -36,9 +36,9 @@ header{
   top:12%;
 }
 .addParty{
-  font-size: 8px;  
+   font-size: 8px;  
   float:left;
-  margin-left: 6.5%;
+  margin-left: 18%;
   margin-top: -18px;
   font-family: rubik;
   color: #023547;
@@ -71,7 +71,7 @@ header{
 .addImg img{
   width:35px;
   position: relative;
-  right: 9%;
+  right: -4%;
 }
 .wishListImg{
   display: block;
@@ -139,9 +139,44 @@ header{
 .wishListImgTheme img{
   width:40px;
   position: relative;
-  right: 4%;
+  right: 5%;
   float: right;
   top: -72px;
+}
+.dobj1 .themeImgDecoretion{
+  width: 49%;
+  height:150px;
+  float: left;
+  margin-top: 100px;
+  display: inline-block;
+  margin-left: 50%;
+}
+.dobj2 .themeImgDecoretion{
+  width: 49%;
+  height:150px;
+  float: left;
+  margin-top: -150px;
+  display: inline-block;
+}
+.dobj3 .themeImgDecoretion{
+  width: 49%;
+  height:150px;
+  float: left;
+  margin-top: 5px;
+  display: inline-block;
+  margin-left: 50%;
+}
+.dobj4 .themeImgDecoretion{
+  width: 49%;
+  height:150px;
+  margin-top: -175px;
+  display: inline-block;
+}
+.textLog{
+  font-family: Rubik;
+  font-size: 40px;
+  margin-left: 25%;
+  color:#023547;
 }
 .obj1 img{
     width: 100%;
@@ -193,9 +228,9 @@ header{
   top:1240px;
 }
 .tobj1 #heart{
-  position: absolute;
-  top: 235px;
-  left: 89%;
+    position: absolute;
+    top: -285px;
+    left: 89%;
 }
 .tobj2 #heart{
   position: absolute;
@@ -204,12 +239,12 @@ header{
 }
 .tobj3 #heart{
   position: absolute;
-  top: 826px;
+  top: 824px;
   left: 89%;
 }
 .tobj4 #heart{
   position: absolute;
-  top: 1127px;
+  top: 1125px;
   left: 89%;
 }
 .tobj5 #heart{
@@ -345,14 +380,21 @@ footer{
   bottom: 79px;
   width: 30px;
 }
+.themesImgAct{
+  display: block;
+  position:relative;
+  left:59%;
+  bottom: 74px;
+  width: 30px;
+}
 .footerProfile{
   position: relative;
   display: inline-block;
   color: #023547;
   font-size: 8px;
-  top: 30px;
+  top: 31px;
   float: right;
-  right: 14%;
+  right: 15.5%;
   font-family: rubik;
 }
 .footerActivity{
@@ -368,7 +410,7 @@ footer{
   display: block;
   position:relative;
   left: 38%;
-  bottom: 125px;
+  bottom: 123px;
   width: 30px;
 }
 .profileImg{
@@ -376,6 +418,20 @@ footer{
   position:relative;
   left:80%;
   bottom: 22px;
+  width: 30px;
+}
+.profileImgT {
+    display: block;
+    position: relative;
+    left: 81%;
+    bottom: 22px;
+    width: 30px;
+  }
+.profileImgAct{
+  display: block;
+  position:relative;
+  left:78.5%;
+  bottom: 20px;
   width: 30px;
 }
 .footerDecoration{
@@ -391,7 +447,7 @@ footer{
   display: block;
   position:relative;
   left:18%;
-  bottom:175px;
+  bottom:173px;
   width: 30px;
 }
 .tobj1 .themeImg{
@@ -399,7 +455,6 @@ footer{
   height:300px;
   float: left;
   margin-top: -109px; 
-  left: -0px;
 }
 .tobj1 #title{
   position: relative;
@@ -420,21 +475,22 @@ footer{
 }
 .tobj1 #description{
   position: relative;
-  top: 200px;
+  top: -10px;
   margin-left: 2%;
   color: #ffffff;
   font-size: 15px;
   font-family: com;
+  font-weight: bold;
 }
 .tobj2 .themeImg{
   width: 100%;
   height:300px;
   float: left;
-  margin-top:-162px;
+  margin-top: -177px;
 }
 .tobj2 #title{
   position: relative;
-  top: 190px;
+  top: 170px;
   margin-left: 2%;
   color: #ffffff;
   font-size: 25px;
@@ -443,7 +499,7 @@ footer{
 }
 .tobj2 #age{
   position: relative;
-  top: 150px;
+  top: 128px;
   margin-left: 25%;
   color: #ffffff;
   font-size: 25px;
@@ -451,11 +507,12 @@ footer{
 }
 .tobj2 #description{
   position: relative;
-  top: 143px;
+  top: 128px;
   margin-left: 2%;
   color: #ffffff;
   font-size: 15px;
   font-family: com;
+  font-weight: bold;
 }
 .tobj3 .themeImg{
   width: 100%;
@@ -487,6 +544,7 @@ footer{
   color: #ffffff;
   font-size: 15px;
   font-family: com;
+  font-weight: bold;
 }
 .tobj4 .themeImg{
   width: 100%;
@@ -518,6 +576,7 @@ footer{
   color: #ffffff;
   font-size: 15px;
   font-family: com;
+  font-weight: bold;
 }
 .tobj5 .themeImg{
   width: 100%;
@@ -528,7 +587,7 @@ footer{
 }
 .tobj5 #title{
   position: relative;
-  top: 175px;
+  top: 167px;
   margin-left: 2%;
   color: #ffffff;
   font-size: 25px;
@@ -536,7 +595,7 @@ footer{
 }
 .tobj5 #age{
   position: relative;
-  top: 135px;
+  top: 126px;
   margin-left: 23%;
   color: #ffffff;
   font-size: 25px;
@@ -544,11 +603,12 @@ footer{
 }
 .tobj5 #description{
   position: relative;
-  top: 129px;
+  top: 125px;
   margin-left: 2%;
   color: #ffffff;
   font-size: 15px;
   font-family: com;
+  font-weight: bold;
 }
 
 #titleFrozen{
@@ -590,12 +650,6 @@ footer{
   display: inline-block;
   font-family: rubi; 
 }
-.themeImgDecoretion{
-  width: 100%;
-  height:300px;
-  float: left;
-  margin-top: -246px; 
-}
 .wishListAddsImg{
   width:40%;
   height:150px;
@@ -608,7 +662,7 @@ footer{
   position: relative;
   top: -46px;
   float: right;
-  margin-right: 30px;
+  margin-right: 17%;
   font-family: rubik;
   color: #023547;
 }
@@ -629,9 +683,9 @@ footer{
   width:200px;
 }
 .wishListPageImg{
-  width:40px;
+  width:80px;
   position: absolute;
-  left: 85%;
+  left: 76%;
   margin-top:-70px;
 }
 .divWishList{
@@ -679,14 +733,14 @@ footer{
 .themesImgParty{
   display: block;
   position:relative;
-  left:59%;
+  left:59.5%;
   bottom: 79px;
   width: 30px;
 }
 .activityeImgParty{ 
   display: block;
   position:relative;
-  left: 30%;
+  left: 31%;
   bottom: 130px;
   width: 30px;
 }
@@ -912,7 +966,6 @@ footer{
 .wishListImgT img{
   width:40px;
   position: relative;
-  right: -1%;
   float: right;
   top: -45px;
 }
@@ -933,7 +986,7 @@ footer{
   font-size: 8px;
   bottom: 27px;
   float: right;
-  right: 33%;
+  right: 34%;
   font-family: rubik;
 }
 .footerAct{
@@ -984,14 +1037,12 @@ footer{
 .top5button{
     margin-left:640px;
 }
-/*
-////////////////////////change///////////////////
-*/
+
 .themeImgFrozen{
   width: 100%;
   height:300px;
   float: left;
-  margin-top: -266px;
+  margin-top: -246px;
 }
 
 #titleOneCreate{
@@ -1013,7 +1064,7 @@ footer{
 
 .fobj1 #titleCreate{
   position: absolute;
-  top: 854px;
+  top: 630px;
   margin-left: 4%;
   color: #ffffff;
   font-size: 22px;
@@ -1021,7 +1072,7 @@ footer{
 }
 .fobj2 #titleCreate{
   position: absolute;
-  top: 620px;
+  top: 810px;
   width:200px;
   margin-left: 4%;
   color: #FFFFFF;
@@ -1031,23 +1082,22 @@ footer{
 .fobj1 .themeImgCreate{
   width: 100%;
   height:200px;
-  position:absolute;
-  top: 743px;
-  z-index: -2;
+  position: relative;
+  top: 145px;
   margin-bottom: 50px;
+  z-index: -2;
 }
 
 .fobj2 .themeImgCreate{
   width: 100%;
   height:200px;
-  z-index: -2;
-  position: absolute;
-  top:540px;
-
+  position: relative;
+  top:47px;
+  z-index:-2;
 }
 .fobj1 #descriptionCreate{
   position: relative;
-  top: 570px;
+  top: 350px;
   margin-left: 4%;
   color: #ffffff;
   font-size: 14px;
@@ -1057,7 +1107,7 @@ footer{
 
 .fobj2 #descriptionCreate{
   position: relative;
-  top: 312px;
+  top: 250px;
   margin-left: 4%;
   color: #ffffff;
   font-size: 14px;
@@ -1066,7 +1116,7 @@ footer{
 }
 #titleOneKits{
   position: relative;
-  top: 530px;
+  top: 50px;
   margin-left: 2%;
   color: #FD4F72;
   font-size: 18px;
@@ -1075,7 +1125,7 @@ footer{
 }
 .fobj3 #titleKits{
   position: absolute;
-  top: 1100px;
+  top: 1090px;
   margin-left: 4%;
   color: #ffffff;
   font-size: 22px;
@@ -1083,7 +1133,7 @@ footer{
 }
 .fobj4 #titleKits{
   position: absolute;
-  top: 1312px;
+  top: 1295px;
   margin-left: 4%;
   color: #ffffff;
   font-size: 22px;
@@ -1091,7 +1141,7 @@ footer{
 }
 .fobj3 #descriptionKits{
   position: relative;
-  top: 590px;
+  top: 120px;
   margin-left: 4%;
   color: #ffffff;
   font-size: 14px;
@@ -1100,7 +1150,7 @@ footer{
 }
 .fobj4 #descriptionKits{
   position: relative;
-  top: 750px;
+  top: 270px;
   margin-left: 4%;
   color: #ffffff;
   font-size: 14px;
@@ -1111,20 +1161,20 @@ footer{
   width: 100%;
   height:200px;
   position: absolute;
-  top:1000px;
+  top:980px;
   z-index:-2;
 }
 .fobj4 .themeImgKits{
   width: 100%;
   height:200px;
   position: absolute;
-  top:1203px;
+  top:1182px;
   margin-bottom: 100px;
   z-index:-2;
 }
 #titleOneActivity{
   position: relative;
-  top: 760px;
+  top: 280px;
   margin-left: 2%;
   color: #FD4F72;
   font-size: 18px;
@@ -1133,7 +1183,7 @@ footer{
 }
 #titleActivity{
   position: absolute;
-  top: 1610px;
+  top: 1570px;
   margin-left: 4%;
   color: #ffffff;
   font-size: 22px;
@@ -1142,7 +1192,7 @@ footer{
 
 #priceActivity{
   position: absolute;
-  top: 1610px;
+  top: 1570px;
   margin-left: 31%;
   color: #ffffff;
   font-size: 22px;
@@ -1153,19 +1203,160 @@ footer{
   width: 100%;
   height:200px;
   position: relative;
-  top:670px;
+  top:200px;
   margin-bottom: 100px;
   z-index:-2;
 }
 #titleOneDecoretion{
   position: relative;
-  top: 1000px;
+  top: 100px;
   margin-left: 2%;
   color: #FD4F72;
   font-size: 18px;
   font-family: rubik; 
 }
-
+.profileDesk,.themesDesk,.mainTitle{
+  display: none;
+}
+.footerDecWish{
+  position: relative;
+  color: #023547;
+  font-size: 8px;
+  float: left;
+  left: 16%;
+  bottom: 126px;
+  font-family: rubik;
+}
+.footerActWish{
+  position: relative;
+  color: #023547;
+  font-size: 8px;
+  float: left;
+  left: 37%;
+  bottom: 77px;
+  font-family: rubik;
+}
+.footerThemesWish{
+  position: relative;
+  display: inline-block;
+  color: #023547;
+  font-size: 8px;
+  bottom: 24px;
+  float: right;
+  right: 34%;
+  font-family: rubik;
+}
+.themesImgWish{
+  display: block;
+  position:relative;
+  left:59%;
+  bottom: 75px;
+  width: 30px;
+}
+.profileImgWish{
+  display: block;
+  position:relative;
+  left:78.5%;
+  bottom: 22px;
+  width: 30px;
+}
+.wishListMain{
+  font-size: 8px;
+  position: relative;
+  top: -46px;
+  float: right;
+  margin-right: 75px;
+  font-family: rubik;
+  color: #023547;
+}
+.footerDecMain{
+  position: relative;
+  color: #023547;
+  font-size: 8px;
+  float: left;
+  left: 16%;
+  bottom: 127px;
+  font-family: rubik;
+}
+.footerActMain{
+  position: relative;
+  color: #023547;
+  font-size: 8px;
+  float: left;
+  left: 37%;
+  bottom: 78px;
+  font-family: rubik;
+}
+.footerThemesMain{
+  position: relative;
+  display: inline-block;
+  color: #023547;
+  font-size: 8px;
+  bottom: 24px;
+  float: right;
+  right: 34%;
+  font-family: rubik;
+}
+.themesImgMain{
+  display: block;
+  position:relative;
+  left:59%;
+  bottom: 75px;
+  width: 30px;
+}
+.profileImgMain{
+  display: block;
+  position:relative;
+  left:78.5%;
+  bottom: 22px;
+  width: 30px;
+}
+.wishListAct{
+  font-size: 8px;
+  position: relative;
+  top: -46px;
+  float: right;
+  margin-right: 71px;
+  font-family: rubik;
+  color: #023547;
+}
+.footerDecAct{
+  position: relative;
+  color: #023547;
+  font-size: 8px;
+  float: left;
+  left: 16%;
+  bottom: 125.5px;
+  font-family: rubik;
+}
+.footerActNew{
+  position: relative;
+  color: #023547;
+  font-size: 8px;
+  float: left;
+  left: 37%;
+  bottom: 78px;
+  font-family: rubik;
+}
+.footerThemesAct{
+  position: relative;
+  display: inline-block;
+  color: #023547;
+  font-size: 8px;
+  bottom: 23px;
+  float: right;
+  right: 34%;
+  font-family: rubik;
+}
+.enter{
+  text-decoration:none;
+  color:023547;
+  font-family: Rubik;
+  position: relative;
+  top:25px;
+  font-size: 25px;
+  margin-left: 23%;
+}
 }
 .clear{
   clear:both;
@@ -1173,10 +1364,26 @@ footer{
 
 /*dektop*/
 @media (min-width:850px){
-.navDesk{
-  width: 100%;
-  height: 80px;
+header{
   background-color: #FCF1B1;
+  width:100%;
+  height:80px;
+}
+.themesDesk{
+  color:#023547;
+  font-family: Rubik;
+  font-size: 15px;
+  position: absolute;
+  left: 55%;
+  top: 40px;  
+}
+.profileDesk{
+  color:#023547;
+  font-family: Rubik;
+  font-size: 15px;
+  position: absolute;
+  left: 65%;
+  top: 40px; 
 }
 .titleDesk{
   color:#023547;
@@ -1185,22 +1392,6 @@ footer{
   position: absolute;
   left: 30%;
   top:6%; 
-}
-.actDesk{
-  color:#023547;
-  font-family: Rubik;
-  font-size: 15px; 
-  position: absolute;
-  left: 45%;
-  top:6%; 
-}
-.profDesk{
-  color:#023547;
-  font-family: Rubik;
-  font-size: 15px;
-  position: absolute;
-  left: 60%;
-  top: 6%;   
 }
 #logo{
   display:block;
@@ -1227,17 +1418,139 @@ footer{
   font-size:50px; 
 }
 .obj1 img{
-    width: 70%;
-    height:200px;
-    margin: 0 auto;
-    margin-top:-74px; 
+    width: 40%;
+    height:400px;
+    margin-left: 120px;
+    margin-top:60px;
+    display: inline-block; 
 }
-.footerProfile,.footerThemes,.imageClick #heart,#pace,.wishList,.wishListImg,.addImg img,.addImg
-,.addParty,.footerActivity,.activityeImg,.themesImg,.decorationImg,.profileImg,.footerDecoration{
+.obj2 img{
+    width: 40%;
+    height:400px;
+    display: inline-block;
+    position: absolute;
+    top: 113px;
+    right:11%;
+}
+.obj3 img{
+    width: 40%;
+    height:400px;
+    margin-left: 120px;
+    margin-top:-21px;
+    display: inline-block; 
+}
+.obj4 img{
+    width: 40%;
+    height:400px;
+    display: inline-block;
+    position: absolute;
+    top: 514px;
+    right:11%;
+}
+.mainTitle{
+  color:#023547;
+  font-family: Rubik;
+  font-size: 45px;
+  margin-left: 40%; 
+}
+.footerProfile,.footerThemesMain,.obj5 img,.obj5 #title,.obj5 #description,.imageClick #heart,#pace,.wishListImg,.addImg img,.addImg
+,.footerActMain,.activityeImg,.themesImgMain,.decorationImg,.profileImgMain,.footerDecMain{
   display: none;
 }
-
-
-
+.addParty{
+  color:#023547;
+  font-family: Rubik;
+  font-size: 15px;
+  position: absolute;
+  left: 30%;
+  top: 40px; 
 }
-
+.wishListMain{
+    color: #023547;
+    font-family: Rubik;
+    font-size: 15px;
+    position: absolute;
+    left: 60%;
+    top: 40px;
+}
+.profile {
+    color: #023547;
+    font-family: Rubik;
+    font-size: 15px;
+    position: absolute;
+    left: 40%;
+    top: 40px;
+}
+.theme {
+    color: #023547;
+    font-family: Rubik;
+    font-size: 15px;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+}
+.obj1 #title{
+  position: absolute;
+  top: 435px;
+  margin-left: 10%;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: rubik;
+}
+.obj1 #description{
+  position: absolute;
+  top: 480px;
+  margin-left: 10%;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: rubik;
+}
+.obj2 #title{
+  position: absolute;
+  top: 435px;
+  margin-left: 50%;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: rubik;
+}
+.obj2 #description{
+  position: absolute;
+  top: 480px;
+  margin-left: 50%;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: rubik;
+}
+.obj3 #title{
+  position: absolute;
+  top: 850px;
+  margin-left: 10%;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: rubik;
+}
+.obj3 #description{
+  position: absolute;
+  top: 885px;
+  margin-left: 10%;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: rubik;
+}
+.obj4 #title{
+  position: absolute;
+  top: 850px;
+  margin-left: 50%;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: rubik;
+}
+.obj4 #description{
+  position: absolute;
+  top: 885px;
+  margin-left: 50%;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: rubik;
+}
+}

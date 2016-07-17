@@ -4,20 +4,20 @@
          <title>wish list</title>
          <link rel="stylesheet" type="text/css" href="css/style.css">
      </head>
-    <header>
-        <a href="index.html" id="logo"> </a>
-         <nav>
-          <h3 class="addParty">Add Party</h3>
-             <a href="addParty.html" class="addImg">
-             <img src="../images/add.png">
-            </a>
-            <h3 class="wishListNew">Wish List</h3>
-            <a href="wishList.html" class="wishListPageImg">
-            <img src="../images/heart.png" >
-            </a>
-         </nav>
-     </header>
          <body ng-controller="wishCtrl">
+            <header>
+                <a href="index.html" id="logo"> </a>
+                 <nav>
+                  <h3 class="addParty">Add Party</h3>
+                     <a href="addParty.html" class="addImg">
+                     <img src="../images/add.png">
+                    </a>
+                    <h3 class="wishListNew">Wish List</h3>
+                    <a href="wishList.html" class="wishListPageImg">
+                    <img src="../images/heart.png" >
+                    </a>
+                 </nav>
+             </header>
          <div id="wrapper">
          <main>
              <tbody>
@@ -27,7 +27,6 @@
                          <h4 class="wishListAddsDes">{{wishlist.description}}</h4>
                          <button class="WishListDel" ng-click="delClick(wishlist.title, wishlist.description, wishlist.sub)">Delete </button>
                  </div>
-                 
                 <div ng-repeat="wishlist in wishController.Activity" class="divWishList">
                          <img ng-src="{{wishlist.image}}" class="wishListAddsImg">
                          <h1 class="wishListAddsTitle">{{wishlist.title}}</h1>
@@ -49,23 +48,23 @@
                 <li>
                     <p class="footerProfile">Profile</p>
                     <a href="#">
-                         <img src="../images/profile.png" class="profileImg">
+                         <img src="../images/profile.png" class="profileImgWish">
                     </a>
                 </li>
                 <li>
-                    <p class="footerThemes">Themes</p>
+                    <p class="footerThemesWish">Themes</p>
                     <a href="showThemes.html">
-                         <img src="../images/themes.png" class="themesImg">
+                         <img src="../images/themes.png" class="themesImgWish">
                     </a>
                 </li>
                 <li>
-                    <p class="footerActivity">Activities</p>
+                    <p class="footerActWish">Activities</p>
                     <a href="showActivity.html">
                         <img src="../images/activities.png" class="activityeImg">
                     </a>
                 </li>
                 <li>
-                    <p class="footerDecoration">Decorations</p>
+                    <p class="footerDecWish">Decorations</p>
                     <a href="#">
                         <img src="../images/decoration.png" class="decorationImg">
                     </a>
@@ -74,10 +73,10 @@
          </nav>
      </footer>
      </div>
-     </body>
         <script src="js/lib/angular/angular.min.js"></script>
         <script src="js/lib/angular/angular-cookies.min.js"></script>
         <script src="js/lib/angular/angular-resource.min.js"></script>
         <script src="js/lib/angular/angular-route.min.js"></script>
         <script src="js/wishController.js"></script>
+ </body>
  </html>

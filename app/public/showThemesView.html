@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<body>
+    <header>
+        <a href="index.html" id="logo"> </a>
+         <nav>
+          <h3 class="addPartyT">Add Party</h3>
+             <a href="addParty.html" class="addImgT">
+             <img src="../images/add.png">
+            </a>
+            <h3 class="wishListT">Wish List</h3>
+            <a href="wishList.html" class="wishListImgT">
+            <img src="../images/heart.png" >
+            </a>
+         </nav>
+     </header>
+     <div id="wrapper"></div>
+            <main>
+            <div id="wrapper">
+             <tbody class="mainImgs">
+                 <div ng-repeat="themes in showThemesController.themes" ng-class=themes.name ng-show="$first">
+                     <h2 id="title">{{themes.theme}}</h2>
+                     <sapn  id="age"> (age: {{themes.age}})</span>
+                     <p id="description">{{themes.description}}</p>
+                     <a ng-href="#/frozen"><img  class="themeImg" ng-src="{{themes.image}}"></a>
+                     <button class="imageClick" ng-click="click(themes.theme, themes.description,themes.image, $index )">
+                         <img src="../images/emptyHeart.png" id="heart">
+                     </button>
+                 </div>
+                 <div ng-repeat="themes in showThemesController.themes" ng-class=themes.name ng-show="!$first">
+                     <h2 id="title">{{themes.theme}}</h2>
+                     <span id="age">(age: {{themes.age}})</span>
+                     <p id="description">{{themes.description}}</p>
+                     <a ng-href="#">
+                     <img ng-src="{{themes.image}}" class="themeImg">
+                     </a>
+                     <button class="imageClick" ng-click="click(themes.theme, themes.description,themes.image, $index)">
+                         <img src="../images/emptyHeart.png" id="heart">
+                     </button>
+                 </div>
+             </tbody>
+        </div>
+         </main>
+         <div class="clear"></div>
+    <footer>
+         <nav>
+            <ul>
+                <li>
+                    <p class="footerProf">Profile</p>
+                    <a href="#">
+                         <img src="../images/profile.png" class="profileImgT">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerT">Themes</p>
+                    <a href="showThemes.html">
+                         <img src="../images/themes.png" class="themesImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerAct">Activities</p>
+                    <a href="showActivity.html">
+                        <img src="../images/activities.png" class="actImg">
+                    </a>
+                </li>
+                <li>
+                    <p class="footerDec">Decorations</p>
+                    <a href="#">
+                        <img src="../images/decoration.png" class="decImg">
+                    </a>
+                </li>
+            </ul>
+         </nav>
+     </footer>
+</body>

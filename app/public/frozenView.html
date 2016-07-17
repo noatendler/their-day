@@ -1,12 +1,6 @@
 <!DOCTYPE html>
-<html ng-app="showFrozen">
- <head>
-     <title>frozen</title>
-     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-     <link rel="stylesheet" type="text/css" href="css/style.css">
- </head>
-     <header>
+ <body ng-controller="showThemesCtrl">
+      <header>
         <a href="index.html" id="logo"> </a>
          <nav>
           <h3 class="addPartyT">Add Party</h3>
@@ -19,7 +13,6 @@
             </a>
          </nav>
      </header>
- <body ng-controller="showThemesCtrl">
   <div id="wrapper">
   <main>
  <tbody>
@@ -50,11 +43,9 @@
           <img ng-src="{{activity.image}}" class="themeImgActivity">
     </div>
     <h2 id="titleOneDecoretion"> DECORETION </h2>
-     <!--<div ng-repeat = "decoretion in FrozenShowTheme.Decortion" ng-class=decoretion.name>>
-          <p id="titleDecoretion">{{decoretion.title}}</p>
+     <div ng-repeat = "decoretion in FrozenShowTheme.Decortion" ng-class=decoretion.name>
           <img ng-src="{{decoretion.image}}" class="themeImgDecoretion">
     </div>
-    !-->
  </div>
  </tbody>
  </main>
@@ -91,6 +82,3 @@
      </footer>
     </div>
  </body>
-    <script src="js/lib/angular/angular.min.js"></script>
-    <script src="js/showFrozenController.js"></script>
- </html>
